@@ -32,7 +32,7 @@ const userSchema = new mongoose.Schema({
 //INFORMATION EXPERT PRINCIPLE,
 //USER OBJECT TREBA DA ZNA const token=user.generateAuthToken();
 //nemozemo ovdije staviti arrow function zbog this.
-//old generateAuthToken kode not used enee more
+//not used eneY more
 userSchema.methods.generateAuthToken = function () {
   return jwt.sign(
     {
@@ -56,7 +56,7 @@ userSchema.methods.generateAccessToken = function () {
       },
     },
     keys.ACCESS_TOKEN_SECRET,
-    { expiresIn: "15m" }
+    { expiresIn: "1h" }
   );
 };
 
